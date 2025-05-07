@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Computer Science</title>
+</head>
+<body>
+    <div class="nav-big-container">
+        <nav class="nav-container">
+            <a href="#home" id="cs-logo" alt="Logo"></a>
+            <a href="#home" class="nav-link">HOME</a>
+            <a href="#about" class="nav-link">ABOUT</a>
+            <a href="#contact" class="nav-link">CONTACT</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <section id="home">
+            <div class="slideshow">
+                <img src="assets/2.png" class="active">
+                <img src="assets/3.png">
+                <img src="assets/4.png">
+                <img src="assets/5.png">
+                <img src="assets/6.png">
+            </div>
+            <div class="overlay-text">
+                <h1 class="name">BACHELOR OF SCIENCE IN COMPUTER SCIENCE</h1>
+                <p>Computer Science is the art of solving problems through logic, code, and innovation.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="title-name">
+                WHAT IS COMPUTER SCIENCE?
+            </div>
+        </section>
+
+        <section id="extra">
+            <div class="text">
+                <h1 id="discover">DISCOVER COMPUTER SCIENCE</h1>
+                <h3 id="be-more">Be more than just a Programmer.</h3>
+            </div>
+            <div class="text2">
+                <ul>
+                    <li>Build Real-World Tech Proj</li>
+                    <li>Turn Ideas into Impactful Solutions</li>
+                    <li>Collaborate, Compete, and Lead with Confidence</li>
+                </ul>     
+            </div>
+        </section>
+        <section id="contact">
+            <div class="ready-container">
+                <h1 id="ready-words">Start your CS journey today</h1>
+            </div>
+            <div>
+                <h1 id="contact-info">
+                    REACH US
+                </h1>
+            </div>
+            <div class="contact-container">
+                <a class="icons" id="phone"></a>
+                <a class="icons" id="email"></a>
+                <a class="icons" id="location"></a>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.slideshow img');
+        let current = 0;
+
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 5000);
+    </script>
+</body>
+</html>

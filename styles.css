@@ -1,0 +1,253 @@
+.nav-container {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: fixed;
+    height: 15%;
+    gap: 20px;
+
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+* {
+    margin-top:0;
+    margin-left: 0;
+    margin-right: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-link{
+    margin-top: 25px;
+    width: 10%;
+    max-width: 200px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #001c43;
+    font-size: clamp(16px, 2vw, 24px);
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#home{
+    flex-direction: column;
+}
+
+#extra
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-image: url('assets/9.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.text{
+    margin-top: 200px;
+    justify-items: center;
+}
+.text2{
+    justify-content: center;
+}
+#discover{
+    font-weight: bold;
+
+}
+
+
+#cs-logo {
+    width: 20vw;
+    height: auto;
+    max-height: 100px;
+    max-width: 175px;
+    background-image: url('assets/cs-logo.png');
+    background-size: cover;
+    background-position: center;
+    border: none;
+}
+
+
+a:hover{
+
+    color:#114b9f;
+    
+}
+#cs-logo:hover {
+    background-image: url('assets/cs-hover.png');
+}
+
+.logo-container {
+    width: 20vw;
+    max-width: 200px;
+    height: auto;
+
+}
+
+.description{
+    width:90%;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+
+.name {
+    font-size: clamp(10px, 2vw, 200px);
+
+}
+.title-name{
+    display: flex;
+    align-items: center;
+    margin-top:130px;
+    width: 90%;
+    justify-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color:#f3f3f3;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#about{
+    
+}
+
+
+#contact{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('assets/8.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#contact-info{
+    margin-top: 20px;
+    font-size: 3.5vw;
+    font-family: 'Montserrat' , sans-serif;
+    font-weight: bolder;
+    color:#e50019;
+
+}
+
+.ready-container{
+    
+    background-color:#001c43;
+    padding-top: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color:white;
+    font-family: 'Montserrat' , sans-serif;
+    font-weight: bolder;
+
+}
+#ready-words{
+    margin-top: 10px;
+}
+.contact-container{
+    margin-left: 20px;
+    margin-top:10px;
+    display: flex;
+    gap: 10%;
+    width: 100%;
+    justify-content: center;
+}
+#contacts{
+    font-family: 'Montserrat' , sans-serif;
+    font-size: 2.5vw;
+}
+
+
+#phone,#email,#location{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+}
+#phone{
+    background-image: url("assets/call_29dp_E50019_FILL0_wght400_GRAD0_opsz24.svg");
+}
+#location{
+    background-image: url("assets/location_on_29dp_E50019_FILL0_wght400_GRAD0_opsz24.svg");
+}
+#email{
+    background-image: url("assets/mail_29dp_E50019_FILL0_wght400_GRAD0_opsz24.svg");
+
+}
+
+.slideshow {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+.slideshow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to right, white 0%, transparent 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+.overlay-text {
+    position: absolute;
+    margin-top: 50%;
+    font-family: 'Montserrat', sans-serif;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color:#001c43;
+    z-index: 2;
+    padding: 1rem;
+
+}
+
+.overlay-text h1 {
+    font-size: clamp(24px, 4vw, 48px);
+    font-weight: 700;
+    margin: 0;
+}
+
+.overlay-text p {
+    font-size: clamp(16px, 2vw, 20px);
+    margin-top: 50px;
+}
+
+#about{
+    background-image: url("assets/what.png");
+    background-size: cover;
+    background-position: center;
+}
