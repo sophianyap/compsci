@@ -1,38 +1,72 @@
 .nav-container {
     font-family: 'Montserrat', sans-serif;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
     width: 100%;
     position: fixed;
-    height: 15%;
-    gap: 20px;
-    left: 20px;
-    top: 20px;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: clamp(11px, 2vw, 20px);
 }
 
+#cs-logo {
+    max-width: 100px;
+    height: auto;
+    border: none;
+}
+
+#cs-logo:hover {
+    background-image: url('assets/cs-hover.png');
+}
+
+.nav-link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        margin-top: 8%;
+        margin-right: 10px;
+    }
+
+    #cs-logo {
+        max-width: 150px;
+    }
+}
+
+
 * {
-    margin-top:0;
-    margin-left: 0;
     margin-right: 0px;
     padding: 0;
     box-sizing: border-box;
 }
 
-.nav-link{
-    margin-top: 15px;
-    width: 10%;
-    max-width: 200px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #001c43;
-    font-size: clamp(12px, 2vw, 24px);
-}
+a:hover{
 
+    color:#114b9f;
+    
+}
 section {
     width: 100%;
-    height: 100vh;
+    
     display: flex;
     align-items: center;
 }
@@ -40,11 +74,23 @@ section {
 #home{
     display: flex;
     flex-direction: column;
+    height: 80vh;
+
 }
 
+#haha{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: center;
+    background-color: #e50019;
+    font-family: 'Montserrat', sans-serif;
+    color: wheat;
+}
 #extra
 {
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -54,44 +100,48 @@ section {
     background-position: center;
 }
 
+#about,#about2{
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color:#f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.title-name, .title-name2{
+
+    text-align: center;
+    width: 80%;
+    display: flex;
+
+    width: 90%;
+    flex-direction: column; 
+}
+
+.title-name{
+    margin-top:200px;
+}
+.title-name2{
+    margin-top:170px;
+}
+
 .text{
-    margin-top: 200px;
+    width: 50%;
+    margin-top: 20px;
     justify-items: center;
+    text-align: center;
 }
 .text2{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    text-align: center;
     justify-content: center;
 }
 #discover{
     font-weight: bold;
-
-}
-
-
-#cs-logo {
-    width: 70px;
-    height: 55px;
-    max-height: 100px;
-    max-width: 200px;
-    background-image: url('assets/cs-logo.png');
-    background-size: cover;
-    background-position: center;
-    border: none;
-}
-
-
-a:hover{
-
-    color:#114b9f;
-    
-}
-#cs-logo:hover {
-    background-image: url('assets/cs-hover.png');
-}
-
-.logo-container {
-    width: 20vw;
-    max-width: 200px;
-    height: auto;
 
 }
 
@@ -110,25 +160,38 @@ a:hover{
     font-size: clamp(10px, 2vw, 200px);
 
 }
-.title-name{
-    display: flex;
+
+#work{
+    font-family: 'Montserrat' , sans-serif;
+    color: white;
+    justify-content: center;
     align-items: center;
-    margin-top:130px;
-    width: 90%;
-    justify-items: center;
-    font-family: 'Montserrat', sans-serif;
-    color:#f3f3f3;
-    display: flex;
+    height: 100vh;
+    display:flex;
     flex-direction: column;
+    background-image: url('assets/work.png');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+
+    text-align: center;
+    justify-content: center;
+}
+.title-work{
     
+    font-size: larger;
 }
 
-#about{
-    
+.careers{
+    width: 80%;
+    justify-content: center;
+    font-size: clamp(12px, 2vw, 50px);
+    align-items: center;
 }
-
 
 #contact{
+    height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -252,6 +315,11 @@ a:hover{
 
 #about{
     background-image: url("assets/what.png");
+    background-size: cover;
+    background-position: center;
+}
+#about2{
+    background-image: url("assets/why.png");
     background-size: cover;
     background-position: center;
 }
