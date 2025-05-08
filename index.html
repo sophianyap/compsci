@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Computer Science</title>
 </head>
 <body>
-    <div class="nav-big-container">
+    <header class="nav-big-container">
         <nav class="nav-container">
-            <a href="#home">
-                <img src="assets/cs-logo.png" id="cs-logo" alt="Logo">
+            <a href="#home" class="logo-container">
+                <img src="assets/cs-logo.png" id="cs-logo" alt="Computer Science Logo">
             </a>
     
-            <a href="#home" class="nav-link">HOME</a>
-            <a href="#about" class="nav-link">ABOUT</a>
-            <a href="#contact" class="nav-link">CONTACT</a>
+            <div class="nav-links-container">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
         </nav>
-    </div>
+    </header>
     
-
-    <div class="container">
+    <main class="main-container">
         <section id="home">
             <div class="slideshow">
-                <img src="assets/2.png" class="active">
-                <img src="assets/3.png">
-                <img src="assets/4.png">
-                <img src="assets/5.png">
-                <img src="assets/6.png">
+                <img src="assets/2.png" class="active" alt="Computer Science slide 1">
+                <img src="assets/3.png" alt="Computer Science slide 2">
+                <img src="assets/4.png" alt="Computer Science slide 3">
+                <img src="assets/5.png" alt="Computer Science slide 4">
+                <img src="assets/6.png" alt="Computer Science slide 5">
             </div>
             <div class="overlay-text">
                 <h1 class="name">BACHELOR OF SCIENCE IN COMPUTER SCIENCE</h1>
                 <p>Computer Science is the art of solving problems through logic, code, and innovation.</p>
-                <p style="font-style: italic ;">Making awesome stuff</p>
-
+                <p style="font-style: italic;">Making awesome stuff</p>
             </div>
         </section>
+        
         <section id="haha">
-            <h2> POWERED BY CODE</h2>
+            <h2>POWERED BY CODE</h2>
         </section>
 
         <section id="about">
@@ -45,15 +47,15 @@
                 <h1>WHAT IS COMPUTER SCIENCE?</h1>
                 <p>Computer Science is the study of computers, algorithms, and how we use technology to solve real-world problems. It blends logic, creativity, and innovation.</p>
             </div>
-
         </section>
+        
         <section id="about2">
             <div class="title-name2">
                 <h1>WHY COMPUTER SCIENCE?</h1>
                 <p>Studying Computer Science opens the door to exciting and high-demand careers. It strengthens problem-solving skills and gives the freedom to create and innovate. With technology playing a key role in every industry, from healthcare and gaming to finance and education, CS offers endless opportunities! Most of all, it empowers you to be part of shaping the future through technology.</p>
             </div>
-            
         </section>
+        
         <section id="work">
             <div class="title-work">
                 <h1>CAREER PATHS</h1>
@@ -67,14 +69,10 @@
                     <li><strong>Blockchain & Security Developer</strong> – Create secure, trusted systems for the future of digital transactions.</li>
                     <li><strong>AR/VR & Game Developer</strong> – Design interactive virtual experiences for learning, training, or fun.</li>
                     <li><strong>Robotics & IoT Engineer</strong> – Connect devices and build smart machines that improve everyday life.</li>
-                  </ul>
+                </ul>
             </div>
-            
-              
         </section>
         
-        
-
         <section id="extra">
             <div class="text">
                 <h1 id="discover">DISCOVER COMPUTER SCIENCE</h1>
@@ -82,39 +80,29 @@
             </div>
             <div class="text2">
                 <ul>
-                    <li>Build Real-World Tech Proj</li>
+                    <li>Build Real-World Tech Projects</li>
                     <li>Turn Ideas into Impactful Solutions</li>
                     <li>Collaborate, Compete, and Lead with Confidence</li>
                 </ul>     
             </div>
         </section>
+        
         <section id="contact">
             <div class="ready-container">
                 <h1 id="ready-words">Start your CS journey today</h1>
             </div>
             <div>
-                <h1 id="contact-info">
-                    REACH US
-                </h1>
+                <h1 id="contact-info">REACH US</h1>
             </div>
             <div class="contact-container">
-                <a class="icons" id="phone" href="tel:09189181626"></a>
-                <a class="icons" id="email" href="admissions@mcm.edu.ph"></a>
-                <a class="icons" id="location" href="https://maps.app.goo.gl/CWZKB4U3bJVn1BWx7"></a>
+                <a class="icons" id="phone" href="tel:09189181626" aria-label="Call us"></a>
+                <a class="icons" id="email" href="mailto:admissions@mcm.edu.ph" aria-label="Email us"></a>
+                <a class="icons" id="location" href="https://maps.app.goo.gl/CWZKB4U3bJVn1BWx7" target="_blank" rel="noopener noreferrer" aria-label="Find our location"></a>
             </div>
-
         </section>
-    </div>
+    </main>
 
-    <script>
-        const images = document.querySelectorAll('.slideshow img');
-        let current = 0;
-
-        setInterval(() => {
-            images[current].classList.remove('active');
-            current = (current + 1) % images.length;
-            images[current].classList.add('active');
-        }, 5000);
-    </script>
+    <script src="script.js"></script>
+    <script src="smooth-scroll.js"></script>
 </body>
 </html>
